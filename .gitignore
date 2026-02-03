@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Captures & exports (sensitive data)
+backend/captures/
+backend/exports/
+
+# Crack history
+backend/crack_history.json
+
+# OUI backup
+backend/oui.json.backup
+
+# Wordlists (too large for git)
+wordlists/*.txt
+wordlists/*.lst
+
+# Env
+.env

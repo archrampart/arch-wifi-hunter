@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+scapy
+websockets
+bleak
+aiohttp
+requests
+pyserial
+netifaces

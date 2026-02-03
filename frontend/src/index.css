@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@500;700&display=swap');
+
+:root {
+  --color-primary: #00ff00;
+  --color-secondary: #0088ff;
+  --color-danger: #ff0055;
+  --color-warning: #ffaa00;
+  --color-crack: #ffc400;
+  --color-bg: #050505;
+  --glass-bg: rgba(10, 10, 10, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 12px;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Rajdhani', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: #e0e0e0;
+  font-family: var(--font-mono);
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Button Styles */
+.cyber-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  color: #aaa;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cyber-button:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.cyber-button.red {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.cyber-button.red:hover {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.cyber-button.blue {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.cyber-button.blue:hover {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.cyber-button.gold {
+  border-color: var(--color-crack);
+  color: var(--color-crack);
+}
+
+.cyber-button.gold:hover {
+  background: var(--color-crack);
+  color: #000;
+}
+
+/* Switches - FLAT DESIGN NO SHADOWS */
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.control-label {
+  font-family: var(--font-display);
+  color: #888;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  /* Inactive Dark Grey */
+  transition: .2s;
+  border: 1px solid #444;
+  border-radius: 9px;
+  /* Round pill shape */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 1px;
+  background-color: #888;
+  transition: .2s;
+  border-radius: 50%;
+  /* Circle */
+}
+
+/* Active States - FLAT COLORS */
+input:checked+.slider {
+  border-color: transparent;
+}
+
+input:checked+.slider:before {
+  transform: translateX(18px);
+  /* Move knob */
+  background-color: #fff;
+  /* Knob becomes WHITE */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific Active Colors */
+input:checked+.slider.green {
+  background-color: var(--color-primary);
+  /* Flat Green */
+}
+
+input:checked+.slider.blue {
+  background-color: var(--color-secondary);
+  /* Flat Blue */
+}
+
+input:checked+.slider.red {
+  background-color: var(--color-danger);
+  /* Flat Red */
+}
+
+/* Blink Animation */
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.blink {
+  animation: blink 1s linear infinite;
+}
