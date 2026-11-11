@@ -1,0 +1,9 @@
+# Core
+fastapi
+uvicorn
+websockets
+scapy
+bleak==2.1.1
+pyserial
+aiohttp
+pydantic
