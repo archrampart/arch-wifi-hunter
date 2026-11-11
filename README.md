@@ -77,9 +77,9 @@ A single-pane web console for 802.11 and Bluetooth Low Energy assessments: scann
 
 | | |
 |---|---|
-| ![Dashboard](assets/1.png) | ![WiFi](assets/2.png) |
-| ![Clients](assets/3.png) | ![BLE](assets/4.png) |
-| ![Evil Twin](assets/5.png) | ![MITM](assets/6.png) |
+| ![Dashboard](assets/1.png)<br>**Dashboard** — live overview | ![WiFi](assets/2.png)<br>**WiFi** — scan, deauth & capture |
+| ![Evil Twin](assets/8.png)<br>**Evil Twin** — rogue AP + captive portal | ![MITM](assets/9.png)<br>**MITM** — live packet & credential capture |
+| ![BLE Attack Suite](assets/7.png)<br>**BLE** — 7-attack suite | ![Probe Analyzer](assets/5.png)<br>**Probe Analyzer** — client intelligence |
 
 ---
 
